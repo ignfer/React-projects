@@ -1,0 +1,60 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+.app-header{
+  width: 100%;
+  border-bottom-style: solid;
+  border-width: 1px;
+  border-color: #555555;
+  margin-bottom: 1.5rem;
+}
+
+.app-admin-section-button{
+  border-style: none;
+  padding: 1rem;
+  border-radius: 100%;
+  background-color: beige;
+}
+
+.n-article{
+  border-style: solid;
+  border-width: 1px;
+  border-color: #555555;
+  border-radius: 15px;
+  padding: 0.5rem;
+}
+
+.w-div{
+  width: 100%;
+  background-color: #306B34;
+}
+
+.w-div.admin{
+  background-color: #0A2463;
+}
