@@ -1,7 +1,7 @@
 import React from 'react';
 import ToggleButton from './ToggleButton';
 
-function Header(){
+function Header({handleClick,theme,setTheme,language,setLanguage}){
     return(
         <>
             <header className='header-container'>
@@ -12,7 +12,8 @@ function Header(){
                 <h1>Toggle Things!</h1>
                 </section>
                 <aside className='header-aside'>
-                    <ToggleButton/>
+                    <ToggleButton handleClick={handleClick} state={theme} setState={setTheme} firstLabel={"Light"} secondLabel={"Dark"}/>
+                    <ToggleButton handleClick={handleClick} state={language} setState={setLanguage} firstLabel={"ENG"} secondLabel={"ESP"}/>
                 </aside>
 
             </header>

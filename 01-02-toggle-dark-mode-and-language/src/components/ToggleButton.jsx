@@ -1,18 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-function ToggleButton({isEnabled,disabledLabel,enabledLabel}){
+function ToggleButton({handleClick,state,setState,firstLabel,secondLabel}){
+
+    const firstLabelState = state ? 'tb-label-selected' : 'tb-label-unselected';
+    const secondLabelState = !state ? 'tb-label-selected' : 'tb-label-unselected';
+
     return(
     <>
         <div className='tb-container'>
             <header className='tb-head'>
-                <label className='tb-enabled-label'>a</label>
-                <label className='tb-disabled-label'>b</label>
+                <label className={firstLabelState}>{firstLabel}</label>
+                <label className={secondLabelState}>{secondLabel}</label>
             </header>
-            <body className='tb-body'>
+            <main className='tb-body' onClick={handleClick}>
                 <div className='tb-background'>
                     <div className='tb-ball'></div>
                 </div>
-            </body>
+            </main>
         </div>
     </>
     );

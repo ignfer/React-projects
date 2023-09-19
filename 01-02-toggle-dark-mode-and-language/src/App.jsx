@@ -1,11 +1,20 @@
 import { useState } from 'react'
 
 import Header from './components/Header'
+
 function App() {
-  
+
+  const [theme,setTheme] = useState(false);
+  const [language,setLanguage] = useState(false);
+
+  function handleClick (state,setState){
+    setState=(!state);
+    console.log(state);
+  }
+
   return (
     <>
-      <Header/>
+      <Header handleClick={handleClick} theme={theme} setTheme={setTheme} language={language} setLanguage={setLanguage} />
       
       <body>
           <ul className='menu-list'>
