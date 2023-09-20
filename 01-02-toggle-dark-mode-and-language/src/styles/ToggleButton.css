@@ -10,6 +10,8 @@
     border-style: solid;
     border-width: 2px;
     border-color: var(--light-purple-2);
+
+    transition:all var(--default-animation-duration) ease-in;/*allows the transition between themes to be smoother*/
 }
 
 .tb-background.dark{

@@ -8,6 +8,8 @@
   background-color: var(--light-white-0);
 
   flex-grow: 1;
+
+  transition:all var(--default-animation-duration) ease-in;/*allows the transition between themes to be smoother*/
 }
 
 .menu-container.dark{
@@ -23,17 +25,20 @@
 
 .menu-item{
   background-color: var(--light-white-0);
-  transition:all 0.1s ease-in;
   cursor:pointer;
   color: var(--light-purple-1);
   font-size: xx-large;
-
+  
   padding: 1rem 2rem 1rem 2rem;
+  
+  transition:all var(--default-animation-duration) ease-in;/*allows the transition between themes to be smoother*/
 }
 
 .menu-item.dark{
   color: var(--light-purple-2);
   background-color: var(--dark-jet-1);
+  
+  transition:all var(--default-animation-duration) ease-in;/*allows the transition between themes to be smoother*/
 }
   
 .menu-item:hover{

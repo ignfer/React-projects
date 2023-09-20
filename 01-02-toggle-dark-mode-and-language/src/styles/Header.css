@@ -12,6 +12,7 @@
     border-color: var(--light-purple-2);
   
     flex-grow: 0;
+
   }
  
 .header-logo{
@@ -24,10 +25,13 @@
   padding: 0 1rem 0 1rem;
 
   flex-grow: 0;
+  /*allows the transition between themes to be smoother*/
+  transition:all 0.2s ease-in; 
 }
 
 .header-logo.dark{
   background-color: var(--dark-jet-1);
+
 }
 
 .header-logo.dark > h1{
@@ -44,6 +48,8 @@
   padding: 0 1rem 0 1rem;
   text-align: center;
   flex-grow: 1;
+
+  transition:all var(--default-animation-duration) ease-in;/*allows the transition between themes to be smoother*/
 }
 
 .header-title.dark{
@@ -62,6 +68,8 @@
   flex-direction: row;
   
   padding: 0 1rem 0 1rem;
+
+  transition:all var(--default-animation-duration) ease-in;/*allows the transition between themes to be smoother*/
 }
 
 .header-aside.dark{

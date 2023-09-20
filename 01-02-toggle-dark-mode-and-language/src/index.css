@@ -27,6 +27,7 @@
 
   --default-margin-width: 2px;
 
+  --default-animation-duration: 0.2s;
   width: 100%;
 }
 

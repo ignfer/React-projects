@@ -7,6 +7,8 @@
     color: var(--light-purple-2);
   
     text-align: center;
+
+    transition:all var(--default-animation-duration) ease-in;/*allows the transition between themes to be smoother*/
 }
 
 .footer-container.dark{
