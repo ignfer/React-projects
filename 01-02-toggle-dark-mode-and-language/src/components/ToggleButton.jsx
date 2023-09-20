@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-function ToggleButton({handleClick,state,setState,firstLabel,secondLabel}){
-
+function ToggleButton({handle,topic,firstLabel,secondLabel}){
+    let state = false;
     const firstLabelState = state ? 'tb-label-selected' : 'tb-label-unselected';
     const secondLabelState = !state ? 'tb-label-selected' : 'tb-label-unselected';
 
@@ -12,9 +12,9 @@ function ToggleButton({handleClick,state,setState,firstLabel,secondLabel}){
                 <label className={firstLabelState}>{firstLabel}</label>
                 <label className={secondLabelState}>{secondLabel}</label>
             </header>
-            <main className='tb-body' onClick={handleClick}>
+            <main className='tb-body'>
                 <div className='tb-background'>
-                    <div className='tb-ball'></div>
+                    <div className='tb-ball' onClick={handle}></div>
                 </div>
             </main>
         </div>

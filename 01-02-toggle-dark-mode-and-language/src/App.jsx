@@ -3,18 +3,26 @@ import { useState } from 'react'
 import Header from './components/Header'
 
 function App() {
-
   const [theme,setTheme] = useState(false);
   const [language,setLanguage] = useState(false);
 
-  function handleClick (state,setState){
-    setState=(!state);
-    console.log(state);
+  const handleTheme = () => {
+      setTheme(!theme);
+      console.log(theme);
+  }
+  
+  const handleLanguage = () => {
+    setLanguage(!language);
+    console.log(language);
+  }
+
+  const testFunction = () =>{
+    console.log("Soy una funcion ejecutandose en el fatheeer");
   }
 
   return (
     <>
-      <Header handleClick={handleClick} theme={theme} setTheme={setTheme} language={language} setLanguage={setLanguage} />
+      <Header handleTheme={handleTheme} handleLanguage={handleLanguage}/>
       
       <body>
           <ul className='menu-list'>
