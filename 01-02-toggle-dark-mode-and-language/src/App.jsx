@@ -16,13 +16,9 @@ function App() {
     console.log(language);
   }
 
-  const testFunction = () =>{
-    console.log("Soy una funcion ejecutandose en el fatheeer");
-  }
-
   return (
     <>
-      <Header handleTheme={handleTheme} handleLanguage={handleLanguage}/>
+      <Header theme={theme} language={language} handleTheme={handleTheme} handleLanguage={handleLanguage}/>
       
       <body>
           <ul className='menu-list'>
