@@ -10,7 +10,10 @@
     border-style: solid;
     border-width: 2px;
     border-color: var(--light-purple-2);
+}
 
+.tb-background.dark{
+    background-color:var(--dark-jet-2);
 }
 
 .tb-ball{
@@ -18,7 +21,6 @@
     height: 2rem;
     border-radius: 100px;
     background-color: var(--light-purple-0);
-
 }
 
 .tb-head{
