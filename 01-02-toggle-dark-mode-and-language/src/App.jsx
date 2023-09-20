@@ -21,7 +21,7 @@ function App() {
   return (
     <>
       <Header theme={theme} language={language} handleTheme={handleTheme} handleLanguage={handleLanguage}/>
-      <ItemList/>
+      <ItemList theme={theme}/>
       <Footer/>
     </>
   )

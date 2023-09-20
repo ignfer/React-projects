@@ -1,17 +1,22 @@
 import React from 'react';
 import '../styles/ItemList.css'
 
-function ItemList({}){
+function ItemList({theme}){
+
+    const containerTheme = theme ? 'menu-container':'menu-container dark';
+    const listTheme = theme ? 'menu-list':'menu-list dark';
+    const itemTheme = theme ? 'menu-item':'menu-item dark';
+
     return(
         <>
-            <body>
-                <ul className='menu-list'>
-                    <li className='menu-item'>Administrar usuarios</li>
-                    <li className='menu-item'>Administrar vehiculos</li>
-                    <li className='menu-item'>Administrar sucursales</li>
-                    <li className='menu-item'>Probar conexion al servidor</li>
-                    <li className='menu-item'>Cerrar sesion</li>
-                    <li className='menu-item'>Contactar soporte</li>
+            <body className={containerTheme}>
+                <ul className={listTheme}>
+                    <li className={itemTheme}>Administrar usuarios</li>
+                    <li className={itemTheme}>Administrar vehiculos</li>
+                    <li className={itemTheme}>Administrar sucursales</li>
+                    <li className={itemTheme}>Probar conexion al servidor</li>
+                    <li className={itemTheme}>Cerrar sesion</li>
+                    <li className={itemTheme}>Contactar soporte</li>
                 </ul>
             </body>
         </>
