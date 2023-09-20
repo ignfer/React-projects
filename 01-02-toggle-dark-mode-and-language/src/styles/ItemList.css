@@ -11,7 +11,7 @@
 }
 
 .menu-container.dark{
-  background-color: var(--dark-jet-0);
+  background-color: var(--dark-jet-1);
 }
 
 .menu-list{
@@ -25,17 +25,23 @@
   background-color: var(--light-white-0);
   transition:all 0.1s ease-in;
   cursor:pointer;
-  color: var(--light-purple-0);
+  color: var(--light-purple-1);
   font-size: xx-large;
 
   padding: 1rem 2rem 1rem 2rem;
 }
 
 .menu-item.dark{
-  background-color: var(--dark-jet-0);
+  color: var(--light-purple-2);
+  background-color: var(--dark-jet-1);
 }
   
 .menu-item:hover{
   background-color: var(--light-purple-1);
   color: var(--light-white-0);
+}
+
+.menu-item.dark:hover{
+  background-color:var(--light-purple-1);
+  color:var(--dark-jet-1);
 }

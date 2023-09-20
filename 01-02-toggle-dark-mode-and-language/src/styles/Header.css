@@ -27,7 +27,11 @@
 }
 
 .header-logo.dark{
-  background-color: var(--dark-jet-0);
+  background-color: var(--dark-jet-1);
+}
+
+.header-logo.dark > h1{
+  color:var(--light-purple-2);
 }
 
 .header-title{
@@ -43,7 +47,11 @@
 }
 
 .header-title.dark{
-  background-color: var(--dark-jet-0);
+  background-color: var(--dark-jet-1);
+}
+
+.header-title.dark > h1{
+  color:var(--light-purple-2);
 }
 
 .header-aside{
@@ -57,5 +65,5 @@
 }
 
 .header-aside.dark{
-  background-color: var(--dark-jet-0);
+  background-color: var(--dark-jet-1);
 }

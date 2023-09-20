@@ -33,7 +33,6 @@
 #root{
   width: 100%;
   min-height: 100vh;
-  background-color: yellow;
   
   display: flex;
   flex-direction: column;
@@ -43,13 +42,6 @@ h1{
   color: var(--light-purple-0);
 }
 
-footer{
-  border-top-style: solid;
-  border-width: var(--default-margin-width);
-  border-color: var(--light-purple-2);
-  background-color: var(--light-white-0);
-  
-  color: var(--light-purple-2);
-
-  text-align: center;
+body{
+  margin:0;
 }

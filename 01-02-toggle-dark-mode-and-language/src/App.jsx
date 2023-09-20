@@ -36,7 +36,7 @@ function App() {
           <ItemList theme={theme} items={items_spanish} />
       }
       
-      <Footer/>
+      <Footer theme={theme}/>
     </>
   )
 }

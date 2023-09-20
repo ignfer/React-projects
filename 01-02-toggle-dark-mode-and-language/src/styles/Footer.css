@@ -1,0 +1,14 @@
+.footer-container{
+    border-top-style: solid;
+    border-width: var(--default-margin-width);
+    border-color: var(--light-purple-2);
+    background-color: var(--light-white-0);
+    
+    color: var(--light-purple-2);
+  
+    text-align: center;
+}
+
+.footer-container.dark{
+    background-color: var(--dark-jet-1);
+}
