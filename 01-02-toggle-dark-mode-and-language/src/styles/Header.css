@@ -13,6 +13,10 @@
   
     flex-grow: 0;
   }
+
+.header-container.dark{
+  border-color: var(--dark-jet-4);
+}
  
 .header-logo{
   background-color: var(--light-white-0);
@@ -28,6 +32,7 @@
 
 .header-logo.dark{
   background-color: var(--dark-jet-0);
+  border-color: var(--dark-jet-4);
 }
 
 .header-logo.dark > h1{
@@ -48,6 +53,7 @@
 
 .header-title.dark{
   background-color: var(--dark-jet-0);
+  border-color: var(--dark-jet-4);
 }
 
 .header-title.dark > h1{

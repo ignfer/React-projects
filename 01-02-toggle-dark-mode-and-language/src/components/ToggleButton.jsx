@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
-function ToggleButton({handle,topic,firstLabel,secondLabel}){
-    let state = false;
-    const firstLabelState = state ? 'tb-label-selected' : 'tb-label-unselected';
-    const secondLabelState = !state ? 'tb-label-selected' : 'tb-label-unselected';
+function ToggleButton({theme,handle,firstLabel,secondLabel}){
+
+    const firstLabelState = theme ? 'tb-label-selected' : 'tb-label-unselected';
+    const secondLabelState = !theme ? 'tb-label-selected' : 'tb-label-unselected';
 
     return(
     <>
