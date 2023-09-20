@@ -12,10 +12,14 @@ function Header({theme,language,handleTheme,handleLanguage}){
         <>            
         <header className={containerTheme}>
             <section className={logoTheme}>
-            <h1>TT!</h1>
+            <h1>
+                {language ? 'CC!' : 'TT!'}
+            </h1>
             </section>
             <section className={titleTheme}>
-            <h1>Toggle Things!</h1>
+            <h1>
+                {language ? 'Cambia Cosas!' :'Toggle Things!'}
+            </h1>
             </section>
             <aside className={asideTheme}>
                 <ToggleButton theme={theme} handle={handleTheme} firstLabel={"Light"} secondLabel={"Dark"}/>
