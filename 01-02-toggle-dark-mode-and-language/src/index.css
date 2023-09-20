@@ -43,18 +43,6 @@ h1{
   color: var(--light-purple-0);
 }
 
-body {
-  height: 100%;
-  margin: 0;
-  display: flex;
-  place-items: center;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--light-white-0);
-
-  flex-grow: 1;
-}
-
 .menu-list{
   list-style:none;
   width: 100%;
