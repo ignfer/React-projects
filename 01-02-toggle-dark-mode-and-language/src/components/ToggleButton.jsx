@@ -1,24 +1,27 @@
 import React, { useState } from 'react';
 
 function ToggleButton({topic,language,theme,handle}){
-    var firstLabelState;
-    var secondLabelState;
-    var firstLabel;
-    var secondLabel;
 
     const backgroundTheme = theme ? 'tb-background' : 'tb-background dark';
     const ballTheme = theme ? 'tb-ball' : 'tb-ball dark';
 
     if(topic === 'theme'){
-        firstLabelState = theme ? 'tb-label-selected' : 'tb-label-unselected';
-        secondLabelState = !theme ? 'tb-label-selected' : 'tb-label-unselected';
-        firstLabel = language ? 'Light' : 'Claro';
-        secondLabel = language ? 'Dark' : 'Oscuro';
+        /*we check the corresponding state to render the correct
+        selected label*/
+        var firstLabelState = theme ? 'tb-label-selected' : 'tb-label-unselected';
+        var secondLabelState = !theme ? 'tb-label-selected' : 'tb-label-unselected';
+        /*aditionally, if the togglebutton re-rendering is the theme
+        one, we check for the language selected to give a correct
+        label*/
+        var firstLabel = language ? 'Light' : 'Claro';
+        var secondLabel = language ? 'Dark' : 'Oscuro';
     }else if(topic === 'language'){
-        firstLabelState = language ? 'tb-label-selected' : 'tb-label-unselected';
-        secondLabelState = !language ? 'tb-label-selected' : 'tb-label-unselected';
-        firstLabel = 'ENG';
-        secondLabel = 'ESP'
+        /*we check the corresponding state to render the correct
+        selected label*/
+        var firstLabelState = language ? 'tb-label-selected' : 'tb-label-unselected';
+        var secondLabelState = !language ? 'tb-label-selected' : 'tb-label-unselected';
+        var firstLabel = 'ENG';
+        var secondLabel = 'ESP'
     }
 
     return(
