@@ -13,8 +13,8 @@ function ToggleButton({topic,language,theme,handle}){
         /*aditionally, if the togglebutton re-rendering is the theme
         one, we check for the language selected to give a correct
         label*/
-        var firstLabel = language ? 'Light' : 'Claro';
-        var secondLabel = language ? 'Dark' : 'Oscuro';
+        var firstLabel = language ? 'Claro' : 'Light';
+        var secondLabel = language ? 'Oscuro' : 'Dark';
         /*we check the corresponding state to render the correct
         ball position depending if is active or not*/
         var ballPosition = theme ? 'tb-ball' : 'tb-ball selected';
@@ -23,8 +23,8 @@ function ToggleButton({topic,language,theme,handle}){
         selected label*/
         var firstLabelState = language ? 'tb-label-selected' : 'tb-label-unselected';
         var secondLabelState = !language ? 'tb-label-selected' : 'tb-label-unselected';
-        var firstLabel = 'ENG';
-        var secondLabel = 'ESP'
+        var firstLabel = 'ESP';
+        var secondLabel = 'ENG'
         /*we check the corresponding state to render the correct
         ball position depending if is active or not*/
         var ballPosition = language ? 'tb-ball' : 'tb-ball selected';
