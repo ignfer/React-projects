@@ -11,12 +11,6 @@ function ItemList({theme,items}){
         <>
             <body className={containerTheme}>
                 <ul className={listTheme}>
-                    {/* <li className={itemTheme}>Administrar usuarios</li>
-                    <li className={itemTheme}>Administrar vehiculos</li>
-                    <li className={itemTheme}>Administrar sucursales</li>
-                    <li className={itemTheme}>Probar conexion al servidor</li>
-                    <li className={itemTheme}>Cerrar sesion</li>
-                    <li className={itemTheme}>Contactar soporte</li> */}
                     {
                     items.map((item, index) => (
                         <li className={itemTheme} key={index}>{item}</li>

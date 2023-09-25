@@ -1,13 +1,25 @@
 import React, { useState } from 'react';
 
-function ToggleButton({theme,handle,firstLabel,secondLabel}){
+function ToggleButton({topic,language,theme,handle}){
+    var firstLabelState;
+    var secondLabelState;
+    var firstLabel;
+    var secondLabel;
 
-    const firstLabelState = theme ? 'tb-label-selected' : 'tb-label-unselected';
-    const secondLabelState = !theme ? 'tb-label-selected' : 'tb-label-unselected';
-    
     const backgroundTheme = theme ? 'tb-background' : 'tb-background dark';
     const ballTheme = theme ? 'tb-ball' : 'tb-ball dark';
 
+    if(topic === 'theme'){
+        firstLabelState = theme ? 'tb-label-selected' : 'tb-label-unselected';
+        secondLabelState = !theme ? 'tb-label-selected' : 'tb-label-unselected';
+        firstLabel = language ? 'Light' : 'Claro';
+        secondLabel = language ? 'Dark' : 'Oscuro';
+    }else if(topic === 'language'){
+        firstLabelState = language ? 'tb-label-selected' : 'tb-label-unselected';
+        secondLabelState = !language ? 'tb-label-selected' : 'tb-label-unselected';
+        firstLabel = 'ENG';
+        secondLabel = 'ESP'
+    }
 
     return(
     <>

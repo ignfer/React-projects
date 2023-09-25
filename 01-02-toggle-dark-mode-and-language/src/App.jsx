@@ -18,12 +18,10 @@ function App() {
 
   const handleTheme = () => {
       setTheme(!theme);
-      console.log(theme);
   }
   
   const handleLanguage = () => {
     setLanguage(!language);
-    console.log(language);
   }
 
   return (

@@ -22,8 +22,8 @@ function Header({theme,language,handleTheme,handleLanguage}){
             </h1>
             </section>
             <aside className={asideTheme}>
-                <ToggleButton theme={theme} handle={handleTheme} firstLabel={"Light"} secondLabel={"Dark"}/>
-                <ToggleButton handle={handleLanguage} firstLabel={"ENG"} secondLabel={"ESP"}/>
+                <ToggleButton topic={'theme'} language={language} theme={theme} handle={handleTheme}/>
+                <ToggleButton topic={'language'} language={language} theme={theme} handle={handleLanguage}/>
             </aside>
 
         </header>
