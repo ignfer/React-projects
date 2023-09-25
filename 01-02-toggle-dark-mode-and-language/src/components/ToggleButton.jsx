@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 function ToggleButton({topic,language,theme,handle}){
 
     const backgroundTheme = theme ? 'tb-background' : 'tb-background dark';
-    const ballTheme = theme ? 'tb-ball' : 'tb-ball dark';
+    
 
     if(topic === 'theme'){
         /*we check the corresponding state to render the correct
@@ -15,6 +15,9 @@ function ToggleButton({topic,language,theme,handle}){
         label*/
         var firstLabel = language ? 'Light' : 'Claro';
         var secondLabel = language ? 'Dark' : 'Oscuro';
+        /*we check the corresponding state to render the correct
+        ball position depending if is active or not*/
+        var ballPosition = theme ? 'tb-ball' : 'tb-ball selected';
     }else if(topic === 'language'){
         /*we check the corresponding state to render the correct
         selected label*/
@@ -22,7 +25,10 @@ function ToggleButton({topic,language,theme,handle}){
         var secondLabelState = !language ? 'tb-label-selected' : 'tb-label-unselected';
         var firstLabel = 'ENG';
         var secondLabel = 'ESP'
-    }
+        /*we check the corresponding state to render the correct
+        ball position depending if is active or not*/
+        var ballPosition = language ? 'tb-ball' : 'tb-ball selected';
+    }   
 
     return(
     <>
@@ -33,7 +39,7 @@ function ToggleButton({topic,language,theme,handle}){
             </header>
             <main className='tb-body'>
                 <div className={backgroundTheme}>
-                    <div className={ballTheme} onClick={handle}></div>
+                    <div className={ballPosition} onClick={handle}></div>
                 </div>
             </main>
         </div>
