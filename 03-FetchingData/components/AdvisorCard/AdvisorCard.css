@@ -1,0 +1,13 @@
+.advisorCard{
+border-width: 1px;
+border-style: solid;
+border-color: aquamarine;
+border-radius: 15px;
+margin: 0.5rem;
+padding: 0.2rem;
+}
+
+.advisorCardTitle{
+font-size: x-large;
+font-weight: bold;
+}

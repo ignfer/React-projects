@@ -1,0 +1,9 @@
+.headerBackground{
+  margin: 0px;
+  padding: 0.7rem;
+  background-color: #0353A4;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
