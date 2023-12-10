@@ -1,4 +1,4 @@
-.advisorCard{
+.clientCard{
   background-color: #F0F7EE;
   border-width: 1px;
   border-style: solid;
@@ -17,12 +17,12 @@
   transition-duration: 0.4s;
 }
 
-.advisorCard:hover{
+.clientCard:hover{
   transform: scale(102%);
   box-shadow: 0px 10px 5px #52BAE0;
 }
 
-.advisorCardTitle{
+.clientCardTitle{
   font-size: x-large;
   font-weight: bold;
 }
