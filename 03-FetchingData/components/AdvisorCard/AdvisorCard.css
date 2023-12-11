@@ -4,8 +4,10 @@
   border-style: solid;
   border-color: #97D6ED;
   border-radius: 15px;
-  margin: 1.5rem;
+
+  margin: 1.2rem;
   padding: 0.5rem;
+
   cursor: pointer;
 
   box-shadow: 0px 10px 5px #86CFEA;
@@ -13,6 +15,9 @@
   color:#162550;
 
   display:flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
 
   transition-duration: 0.4s;
 }
@@ -25,4 +30,31 @@
 .advisorCardTitle{
   font-size: x-large;
   font-weight: bold;
+  width: 100%;
+  line-height: 0.2rem;
+}
+
+.advisorCardDescription{
+  padding: 0.4rem;
+  margin: 0px;
+}
+
+.advisordCardStatusBadge{
+  background-color:dodgerblue;
+  
+  border-radius: 15px;
+  border-style: solid;
+  border-width: 1px;
+  border-color:blue;
+
+  font-weight: bold;
+  font-size: small;
+  color: white;
+
+  padding: 0.2rem;
+}
+
+.advisorCardImg{
+  width: 100px;
+  height: 100px;
 }

@@ -1,13 +1,15 @@
 import './AdvisorCard.css'
 
-function AdvisorCard({advisors, setSelectedClient}){
+function AdvisorCard({advisors, setSelectedAdvisor}){
+
   return(
     <>
       {advisors.map((advisor) => (
-        <div className="advisorCard" key={advisor.AccountNumber} onClick={() => setSelectedClient(advisor.AccountNumber)}>
-        <p className="advisorCardTitle">{advisor.AccountName}</p>
-        <p>Total clients: {advisor.Clients.length}</p>
-        <p>{advisor.AccountStatus}</p>
+        <div className='advisorCard' key={advisor.AccountNumber} onClick={() => setSelectedAdvisor(advisor.AccountNumber)}>
+        <img className='advisorCardImg' src='../../src/assets/advisor.png'></img>
+        <p className='advisorCardTitle'>{advisor.AccountName} <span className='advisordCardStatusBadge'>{advisor.AccountStatus}</span></p>
+        <p className='advisorCardDescription'>Total clients: {advisor.Clients.length}<br></br>
+        Working since: {advisor.AsOfDate}</p>
         </div>
       ))}
     </>

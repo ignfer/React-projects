@@ -4,4 +4,42 @@
   text-align: center;
 
   color:#162550;
+
+  height: 100%;
+}
+
+.container{
+  display: flex;
+  flex-grow: 1;
+
+  width: 100%;
+  max-height: 100vh;
+  min-height: 100vh;
+
+  overflow-y: hidden;
+
+}
+
+.cardsContainer{
+  overflow-x: scroll;
+  scrollbar-width: none;
+
+  border-right-style: solid;
+  border-width: 1px;
+  border-color: #97D6ED;
+}
+
+.cardsContainer > h1{
+  position: sticky;
+  top: 0px;
+
+  margin:0px;
+  padding: 0.5rem;
+  background-color: #F0F7EE;
+
+  border-style: solid none solid none;
+  border-width: 1px;
+  border-color: #97D6ED;
+
+  z-index: 2;
 }

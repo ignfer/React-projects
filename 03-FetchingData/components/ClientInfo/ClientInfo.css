@@ -1,0 +1,8 @@
+.clientInfoForm{
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 15px;
+
+  padding: 1.5rem;
+  margin: 1.5rem;
+}

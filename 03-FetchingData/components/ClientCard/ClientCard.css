@@ -4,8 +4,10 @@
   border-style: solid;
   border-color: #97D6ED;
   border-radius: 15px;
-  margin: 1.5rem;
+
+  margin: 1.2rem;
   padding: 0.5rem;
+
   cursor: pointer;
 
   box-shadow: 0px 10px 5px #86CFEA;
@@ -13,7 +15,10 @@
   color:#162550;
 
   display:flex;
-
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  
   transition-duration: 0.4s;
 }
 

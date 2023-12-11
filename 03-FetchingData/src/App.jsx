@@ -3,6 +3,7 @@ import './App.css'
 
 import AdvisorCard from '../components/AdvisorCard/AdvisorCard'; 
 import ClientCard from '../components/ClientCard/ClientCard';
+import ClientInfo from '../components/ClientInfo/ClientInfo';
 
 import Header from '../components/Header/Header';
 import ProjectDescription from '../components/ProjectDescription/ProjectDescription';
@@ -10,8 +11,9 @@ import ProjectDescription from '../components/ProjectDescription/ProjectDescript
 function App() {
 
   const [advisors, setAdvisors] = useState(null);
-  const [selectedClient, setSelectedClient] = useState(null);
+  const [selectedAdvisor, setSelectedAdvisor] = useState(null);
   const [clients, setClients] = useState(null);
+  const [selectedClient, setSelectedClient] = useState({});
 
   /**
    * fetch the heroku service and parse the response into json, then
@@ -28,23 +30,36 @@ function App() {
   },[])
 
   useEffect(() => {
-    advisors.forEach((advisor) => {
-      if(advisor.AccountNumber === selectedClient){
-        setClients(advisor.Clients);
-      }
-    });
-    console.log(clients);
-  },[selectedClient]);
+    if(advisors != null){
+      advisors.forEach((advisor) => {
+        if(advisor.AccountNumber === selectedAdvisor){
+          setClients(advisor.Clients);
+        }
+      });
+    }
+  },[selectedAdvisor]);
   
   return (
     <>
       <Header title={'03 - Fetching Data'}></Header>
 
       <ProjectDescription></ProjectDescription>
-      <p>Now showing the clients of the client number: {selectedClient}</p>
-      
-      {advisors && <AdvisorCard advisors={advisors} setSelectedClient={setSelectedClient}></AdvisorCard>}
-      {clients && <ClientCard clients={clients}></ClientCard>}
+      <p>Now showing the clients of the client number: {selectedAdvisor}</p>
+
+      <div className='container'>
+        <div className='cardsContainer'>
+          <h1>Advisors</h1>
+          {advisors && <AdvisorCard advisors={advisors} setSelectedAdvisor={setSelectedAdvisor}></AdvisorCard>}
+        </div>
+        <div className='cardsContainer'>
+          <h1>Clients</h1>
+          {clients && <ClientCard clients={clients} setSelectedClient={setSelectedClient}></ClientCard>}
+        </div>
+        <div className='clientInfoContainer'>
+          <h1>Selected client info</h1>
+          {selectedClient && selectedAdvisor && <ClientInfo selectedClient={selectedClient} selectedAdvisor={selectedAdvisor}></ClientInfo>}
+        </div>
+      </div>
     </>
   );
 }
