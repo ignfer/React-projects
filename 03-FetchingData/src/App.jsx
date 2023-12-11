@@ -13,7 +13,7 @@ function App() {
   const [advisors, setAdvisors] = useState(null);
   const [selectedAdvisor, setSelectedAdvisor] = useState(null);
   const [clients, setClients] = useState(null);
-  const [selectedClient, setSelectedClient] = useState({});
+  const [selectedClient, setSelectedClient] = useState(null);
 
   /**
    * fetch the heroku service and parse the response into json, then
@@ -29,8 +29,12 @@ function App() {
     .then(data => setAdvisors(data));
   },[])
 
+  /**
+   * whenever the 'selectedAdvisor' state is updated, this hook runs and
+   * get the clients from the selected advisor
+   */
   useEffect(() => {
-    if(advisors != null){
+    if(advisors){
       advisors.forEach((advisor) => {
         if(advisor.AccountNumber === selectedAdvisor){
           setClients(advisor.Clients);
@@ -52,11 +56,11 @@ function App() {
         </div>
         <div className='cardsContainer'>
           <h1>Clients</h1>
-          {clients && <ClientCard clients={clients} setSelectedClient={setSelectedClient}></ClientCard>}
+          {clients ? <ClientCard clients={clients} setSelectedClient={setSelectedClient}></ClientCard> : <h3>Nothing to show here yet!</h3>}
         </div>
         <div className='cardsContainer'>
           <h1>Selected client info</h1>
-          {selectedClient && selectedAdvisor && <ClientInfo selectedClient={selectedClient} selectedAdvisor={selectedAdvisor}></ClientInfo>}
+          {selectedClient ? <ClientInfo selectedClient={selectedClient} selectedAdvisor={selectedAdvisor}></ClientInfo> : <h3>Nothing to show here yet!</h3>}
         </div>
       </div>
     </>
