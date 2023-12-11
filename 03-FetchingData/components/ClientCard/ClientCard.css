@@ -20,6 +20,8 @@
   flex-wrap: wrap;
   
   transition-duration: 0.4s;
+
+  word-wrap: break-word;
 }
 
 .clientCard:hover{

@@ -13,6 +13,7 @@ export default function ClientInfo({selectedClient, selectedAdvisor}){
           <input type='text' placeholder={selectedClient.Phone} readOnly></input>
           <label>Asesored by</label>
           <input type='text' placeholder={selectedAdvisor} readOnly></input>
+          <button>Contact</button>
         </form>
       </div>
     </>

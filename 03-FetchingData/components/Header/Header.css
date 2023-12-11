@@ -1,9 +1,9 @@
 .headerBackground{
   margin: 0px;
   padding: 0.2rem;
-  background-color: #0353A4;
+  background-color: #004BA8;
 
-  color:#D7EBFE;
+  color:white;
 
   display: flex;
   justify-content: space-between;

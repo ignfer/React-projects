@@ -44,7 +44,6 @@ function App() {
       <Header title={'03 - Fetching Data'}></Header>
 
       <ProjectDescription></ProjectDescription>
-      <p>Now showing the clients of the client number: {selectedAdvisor}</p>
 
       <div className='container'>
         <div className='cardsContainer'>
@@ -55,7 +54,7 @@ function App() {
           <h1>Clients</h1>
           {clients && <ClientCard clients={clients} setSelectedClient={setSelectedClient}></ClientCard>}
         </div>
-        <div className='clientInfoContainer'>
+        <div className='cardsContainer'>
           <h1>Selected client info</h1>
           {selectedClient && selectedAdvisor && <ClientInfo selectedClient={selectedClient} selectedAdvisor={selectedAdvisor}></ClientInfo>}
         </div>

@@ -21,6 +21,7 @@
 }
 
 .cardsContainer{
+  width: 100%;
   overflow-x: scroll;
   scrollbar-width: none;
 

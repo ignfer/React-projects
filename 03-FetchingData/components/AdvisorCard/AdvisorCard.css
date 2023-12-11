@@ -39,13 +39,28 @@
   margin: 0px;
 }
 
-.advisordCardStatusBadge{
-  background-color:dodgerblue;
+.Enabled{
+  background-color:#14B850;
   
   border-radius: 15px;
   border-style: solid;
   border-width: 1px;
-  border-color:blue;
+  border-color:#0E8138;
+
+  font-weight: bold;
+  font-size: small;
+  color: white;
+
+  padding: 0.2rem;
+}
+
+.Disabled{
+  background-color:#F64740;
+  
+  border-radius: 15px;
+  border-style: solid;
+  border-width: 1px;
+  border-color:#F41D15;
 
   font-weight: bold;
   font-size: small;
