@@ -8,7 +8,7 @@
 
   border-style: solid;
   border-width: 1px;
-  border-color: #52BAE0;
+  border-color: #3D3D3D;
 
   display: flex;
   flex-direction: column;
@@ -16,22 +16,16 @@
 }
 
 .clientInfoForm > input{
-  background-color: #F0F7EE;
+  background-color: #0A0A0A;
   border-width: 1px;
-  border-radius: 5px;
-  border-color: #52BAE0;
+  border-radius: 50px;
+  border-color: #3D3D3D;
 
-  color:#004BA8;
+  color:#F5F5F5;
   font-size: large;
-  padding: 0.2rem;
+  padding: 0.6rem;
 }
 
-.clientInfoForm > button{
-  background-color: #004BA8;
-  border-radius: 15px;
-  border-width: 1px;
-  border-color: #52BAE0;
-  padding: 0.6rem;
-  font-size: larger;
-  font-weight: bold;
+.clientInfoForm > label {
+  color:#3D3D3D;
 }

@@ -3,8 +3,6 @@
   padding: 0px;
   text-align: center;
 
-  color:#162550;
-
   height: 100%;
 }
 
@@ -12,12 +10,16 @@
   display: flex;
   flex-grow: 1;
 
-  width: 100%;
-  max-height: 100vh;
-  min-height: 100vh;
+  max-height: 90vh;
 
   overflow-y: hidden;
 
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 15px;
+  border-color: #3D3D3D;
+  margin:2rem;
 }
 
 .cardsContainer{
@@ -27,7 +29,7 @@
 
   border-right-style: solid;
   border-width: 1px;
-  border-color: #97D6ED;
+  border-color: #3D3D3D;
 }
 
 .cardsContainer > h1{
@@ -36,11 +38,15 @@
 
   margin:0px;
   padding: 0.5rem;
-  background-color: #F0F7EE;
+  background-color: #0A0A0A;
 
   border-style: solid none solid none;
   border-width: 1px;
-  border-color: #97D6ED;
+  border-color: #3D3D3D;
 
   z-index: 2;
+}
+
+h3{
+  color: #3D3D3D;
 }

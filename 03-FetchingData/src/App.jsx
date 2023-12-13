@@ -5,7 +5,6 @@ import AdvisorCard from '../components/AdvisorCard/AdvisorCard';
 import ClientCard from '../components/ClientCard/ClientCard';
 import ClientInfo from '../components/ClientInfo/ClientInfo';
 
-import Header from '../components/Header/Header';
 import ProjectDescription from '../components/ProjectDescription/ProjectDescription';
 
 function App() {
@@ -45,8 +44,6 @@ function App() {
   
   return (
     <>
-      <Header title={'03 - Fetching Data'}></Header>
-
       <ProjectDescription></ProjectDescription>
 
       <div className='container'>
@@ -56,11 +53,11 @@ function App() {
         </div>
         <div className='cardsContainer'>
           <h1>Clients</h1>
-          {clients ? <ClientCard clients={clients} setSelectedClient={setSelectedClient}></ClientCard> : <h3>Nothing to show here yet!</h3>}
+          {clients ? <ClientCard clients={clients} setSelectedClient={setSelectedClient}></ClientCard> : <h3>Select an advisor to visualize their clients.</h3>}
         </div>
         <div className='cardsContainer'>
           <h1>Selected client info</h1>
-          {selectedClient ? <ClientInfo selectedClient={selectedClient} selectedAdvisor={selectedAdvisor}></ClientInfo> : <h3>Nothing to show here yet!</h3>}
+          {selectedClient ? <ClientInfo selectedClient={selectedClient} selectedAdvisor={selectedAdvisor}></ClientInfo> : <h3>Select a client to visualize their data.</h3>}
         </div>
       </div>
     </>
