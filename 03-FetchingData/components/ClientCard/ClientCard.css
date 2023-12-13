@@ -29,6 +29,17 @@
   box-shadow: 0px 10px 5px #1F1F1F;
 }
 
+.clientCard:hover > img{
+  filter: saturate(10);
+}
+
+.clientCardImg{
+  width: 100px;
+  height: 100px;
+  filter: saturate(0);
+  transition-duration: 0.2s;
+}
+
 .clientCardTitle{
   font-size: x-large;
   font-weight: bold;

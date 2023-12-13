@@ -15,11 +15,13 @@
   overflow-y: hidden;
 
   box-sizing: border-box;
-  border-style: solid;
+  border-style: none none solid solid;
   border-width: 1px;
-  border-radius: 15px;
   border-color: #3D3D3D;
+  
   margin:2rem;
+  margin-top: 0px;
+
 }
 
 .cardsContainer{
@@ -39,13 +41,21 @@
   margin:0px;
   padding: 0.5rem;
   background-color: #0A0A0A;
-
-  border-style: solid none solid none;
+  border-style: none none solid none;
   border-width: 1px;
   border-color: #3D3D3D;
 
   z-index: 2;
+
+  transition-duration: 0.4s;
 }
+
+.cardsContainer:hover > h1 {
+  transform: scale(102%);
+  color:#0041CC;
+  box-shadow: 0px 5px 5px #00133D;
+}
+
 
 h3{
   color: #3D3D3D;

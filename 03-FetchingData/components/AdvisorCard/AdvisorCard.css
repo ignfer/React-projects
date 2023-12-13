@@ -21,9 +21,21 @@
 
   transition-duration: 0.4s;
 }
+
 .advisorCard:hover{
   transform: scale(102%);
   box-shadow: 0px 10px 5px #1F1F1F;
+}
+
+.advisorCard:hover > img{
+  filter: saturate(10);
+}
+
+.advisorCardImg{
+  width: 100px;
+  height: 100px;
+  filter: saturate(0);
+  transition-duration: 0.4s;
 }
 
 .advisorCardTitle{
@@ -32,10 +44,6 @@
   width: 100%;
   line-height: 0.2rem;
   color:#F5F5F5;
-}
-
-.advisorCard::before{
-  transform: skew(45deg);
 }
 
 .advisorCardDescription{
@@ -71,9 +79,4 @@
   color: white;
 
   padding: 0.2rem;
-}
-
-.advisorCardImg{
-  width: 100px;
-  height: 100px;
 }
