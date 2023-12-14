@@ -1,7 +1,7 @@
 .clientInfoForm{
   border-style: solid;
   border-width: 1px;
-  border-radius: 15px;
+  border-radius: 5px;
 
   padding: 1.5rem;
   margin: 1.5rem;
@@ -18,7 +18,7 @@
 .clientInfoForm > input{
   background-color: #0A0A0A;
   border-width: 1px;
-  border-radius: 50px;
+  border-radius: 5px;
   border-color: #3D3D3D;
 
   color:#F5F5F5;
