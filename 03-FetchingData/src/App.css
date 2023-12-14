@@ -56,7 +56,28 @@
   box-shadow: 0px 5px 5px #00133D;
 }
 
-
 h3{
   color: #3D3D3D;
+}
+
+.fetchButton{
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  font-weight: 600;
+  font-size: large;
+
+  background-color: #0041CC;
+  
+  padding: 0.6rem 3rem 0.6rem 3rem;
+  margin: 0px 0px 1.5rem 0px;
+
+  border-radius: 50px;
+  border-width: 1px;
+  border-color: #00133D;
+
+  transition-duration: 0.4s;
+}
+
+.fetchButton:hover{
+  background-color: #00133D;
 }

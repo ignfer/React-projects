@@ -35,7 +35,7 @@
   width: 100px;
   height: 100px;
   filter: saturate(0);
-  transition-duration: 0.4s;
+  transition-duration: 0.2s;
 }
 
 .advisorCardTitle{

@@ -9,24 +9,27 @@ import ProjectDescription from '../components/ProjectDescription/ProjectDescript
 
 function App() {
 
+  const [fetchButton, setFetchButton] = useState(false);
   const [advisors, setAdvisors] = useState(null);
   const [selectedAdvisor, setSelectedAdvisor] = useState(null);
   const [clients, setClients] = useState(null);
   const [selectedClient, setSelectedClient] = useState(null);
-
+  
   /**
    * fetch the heroku service and parse the response into json, then
    * set that data as the state of the advisors.
-   * because we set an empty dependency array, this prevent the update for happening
-   * more than the first time when the app component is rendered
+   * we set the 'fetchButton' state as the dependency array of this side effect so
+   * it will only fetch the data when the state is true, by default is set on false
    */
   useEffect(() => {
-    fetch('https://altimetrik-bootcamp.herokuapp.com/LegalAccounts')
-    .then(response => {
-      return response.json();
-    })
-    .then(data => setAdvisors(data));
-  },[])
+    if(fetchButton){
+      fetch('https://altimetrik-bootcamp.herokuapp.com/LegalAccounts')
+      .then(response => {
+        return response.json();
+      })
+      .then(data => setAdvisors(data));
+    }
+  },[fetchButton]);
 
   /**
    * whenever the 'selectedAdvisor' state is updated, this hook runs and
@@ -40,16 +43,16 @@ function App() {
         }
       });
     }
-  },[selectedAdvisor]);
+  },[selectedAdvisor,advisors]);
   
   return (
     <>
       <ProjectDescription></ProjectDescription>
-
+      
       <div className='container'>
         <div className='cardsContainer'>
           <h1>Advisors</h1>
-          {advisors && <AdvisorCard advisors={advisors} setSelectedAdvisor={setSelectedAdvisor}></AdvisorCard>}
+          {advisors ? <AdvisorCard advisors={advisors} setSelectedAdvisor={setSelectedAdvisor}></AdvisorCard> : <><h3>Nothing to see here yet, fetch some data!</h3><button className='fetchButton' onClick={() => setFetchButton(!fetchButton)}>Fetch</button></>}
         </div>
         <div className='cardsContainer'>
           <h1>Clients</h1>
