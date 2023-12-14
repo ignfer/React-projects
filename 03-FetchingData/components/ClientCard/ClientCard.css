@@ -43,6 +43,7 @@
 .clientCardTitle{
   font-size: x-large;
   font-weight: bold;
+  word-wrap: break-word;
   width: 100%;
   line-height: 0.2rem;
   color:#F5F5F5;

@@ -38,12 +38,12 @@ function App() {
   useEffect(() => {
     if(advisors){
       advisors.forEach((advisor) => {
-        if(advisor.AccountNumber === selectedAdvisor){
+        if(advisor.AccountNumber === selectedAdvisor.AccountNumber){
           setClients(advisor.Clients);
         }
       });
     }
-  },[selectedAdvisor,advisors]);
+  },[selectedAdvisor]);
   
   return (
     <>
