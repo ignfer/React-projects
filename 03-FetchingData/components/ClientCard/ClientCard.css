@@ -48,3 +48,8 @@
   line-height: 0.2rem;
   color:#F5F5F5;
 }
+
+svg{
+  fill:#0041CC;
+  stroke:#0041CC;
+}
