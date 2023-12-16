@@ -4,7 +4,7 @@ export default function ProjectDescription(){
     <>
       <section className="ProjectDescription">
         <img src="../../src/assets/IF_logo.png" height={'85'}></img>
-        <h1>{'01 - ToDo list app - useState'}</h1>
+        <h1>{'01 - ToDo list app - useState & useRef'}</h1>
         <p>The main objective of this small app is to get used to <strong>React</strong> and the
         concept of states, hooks, and reusable components. To spend time
         on the important things we will work the whole development of this

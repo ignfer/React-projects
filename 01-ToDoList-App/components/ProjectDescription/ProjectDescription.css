@@ -8,6 +8,10 @@
   border-color: #3D3D3D;
 
   color:#858585;
+
+  display:flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .ProjectDescription > h1,strong{
