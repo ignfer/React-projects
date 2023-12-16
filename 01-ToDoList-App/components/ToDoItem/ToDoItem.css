@@ -1,0 +1,90 @@
+.tdi-container {
+  padding: 0.5rem;
+}
+
+.tdi-section {
+  height: 100%;
+  
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  padding: 0 0.8rem 0 0.8rem;
+  margin: 0.5rem;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+  border-color: #3D292D;
+  color: #3D292D;
+
+  transition:all 0.2s ease;
+
+  cursor: pointer;
+}
+
+.tdi-tittle {
+  color: #F5F5F5;
+  font-size:x-large;
+}
+
+.tdi-section:hover {
+  transform: translateX(10px);
+  background-image: linear-gradient(to right,#6E2127,#130D0E);
+  color:#F5F5F5;
+}
+
+.tdi-section.ready:hover {
+  background-image: linear-gradient(to right,#204622,#130D0E);
+}
+
+.tdi-section.inprogress:hover {
+  background-image: linear-gradient(to right,#D4910C,#130D0E);
+}
+
+.tdi-state {
+  height: 55px;
+  width: 20px;
+  background-color: #AD343E;
+  
+  border-style: solid;
+  border-width: 1px;
+  border-color: #3D292D;
+  border-radius: 15px;
+  
+  cursor: pointer;
+}
+
+.tdi-state.ready {
+  background-color: #306B34;
+}
+
+.tdi-state.inprogress{
+  background-color: #F2AF29;
+}
+
+.tdi-badge{
+  background-color: #AD343E;
+  padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+  
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 50px;
+  border-color: #3D292D;
+  color:#F5F5F5;
+  
+  font-size: smaller;
+  font-weight: 600;
+
+  line-height: 0.4rem;
+}
+
+.tdi-badge.ready{
+  background-color: #306B34;
+}
+
+.tdi-badge.inprogress{
+  background-color: #F2AF29;
+}

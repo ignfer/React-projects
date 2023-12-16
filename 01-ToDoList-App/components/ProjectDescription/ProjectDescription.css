@@ -1,0 +1,15 @@
+.ProjectDescription{
+  padding: 0.5rem;
+  margin: 1rem;
+  margin-bottom:0px;
+  
+  border-style: solid;
+  border-width: 1px;
+  border-color: #3D3D3D;
+
+  color:#858585;
+}
+
+.ProjectDescription > h1,strong{
+  color:#F5F5F5;
+}
