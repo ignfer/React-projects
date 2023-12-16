@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './ToDoItem.css'
 
 export default function ToDoItem({ tittle, description, index}) {
-  const [status, setStatus] = useState(0);
+  const [status, setStatus] = useState(1);
   const [statusString, setStatusString] = useState('');
   const [badgeContent, setBadgeContent] = useState('not started');
 
@@ -10,10 +10,8 @@ export default function ToDoItem({ tittle, description, index}) {
   const sectionClassName = 'tdi-section';
   const badgeClassname = 'tdi-badge';
 
-  const handleClick = () => {
-    console.log('prev: ' + status);
+  function handleClick(){
     status >= 2 ? setStatus(0) : setStatus((status) => status += 1);
-    console.log('post: ' + status);
 
     switch(status){
       case 0:
@@ -28,12 +26,15 @@ export default function ToDoItem({ tittle, description, index}) {
         setStatusString(' ready');
         setBadgeContent('done');
       break;
+      default:
+        console.log('defaultep');
+      break;
     }
   }
 
   return (
     <>
-      <section className={sectionClassName + statusString} onClick={handleClick}>
+      <section className={sectionClassName + statusString} onClick={() => handleClick()}>
         <main className="tdi-main">
           <h3 className="tdi-tittle">{index} - {tittle}</h3>
           <span className={badgeClassname + statusString}>{badgeContent}</span>
