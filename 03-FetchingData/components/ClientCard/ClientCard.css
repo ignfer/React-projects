@@ -29,14 +29,14 @@
   box-shadow: 0px 10px 5px #1F1F1F;
 }
 
-.clientCard:hover > img{
-  filter: saturate(10);
+.clientCard:hover > svg{
+  fill:#0041CC;
+  stroke:#0041CC;
 }
 
-.clientCardImg{
-  width: 100px;
-  height: 100px;
-  filter: saturate(0);
+svg{
+  fill:#3D3D3D;
+  stroke:#3D3D3D;
   transition-duration: 0.2s;
 }
 
@@ -47,9 +47,4 @@
   width: 100%;
   line-height: 0.2rem;
   color:#F5F5F5;
-}
-
-svg{
-  fill:#0041CC;
-  stroke:#0041CC;
 }

@@ -52,11 +52,11 @@ function App() {
       <div className='container'>
         <div className='cardsContainer'>
           <h1>Advisors</h1>
-          {advisors ? <AdvisorCard advisors={advisors} setSelectedAdvisor={setSelectedAdvisor}></AdvisorCard> : <><h3>Nothing to see here yet, fetch some data!</h3><button className='fetchButton' onClick={() => setFetchButton(!fetchButton)}>Fetch</button></>}
+          {advisors ? <AdvisorCard advisors={advisors} setSelectedAdvisor={setSelectedAdvisor} setSelectedClient={setSelectedClient}></AdvisorCard> : <><h3>Nothing to see here yet, fetch some data!</h3><button className='fetchButton' onClick={() => setFetchButton(!fetchButton)}>Fetch</button></>}
         </div>
         <div className='cardsContainer'>
           <h1>Clients</h1>
-          {clients ? <ClientCard clients={clients} setSelectedClient={setSelectedClient}></ClientCard> : <h3>Select an advisor to visualize their clients.</h3>}
+          {clients ? <ClientCard clients={clients} setSelectedClient={setSelectedClient} selectedAdvisor={selectedAdvisor}></ClientCard> : <h3>Select an advisor to visualize their clients.</h3>}
         </div>
         <div className='cardsContainer'>
           <h1>Selected client info</h1>
